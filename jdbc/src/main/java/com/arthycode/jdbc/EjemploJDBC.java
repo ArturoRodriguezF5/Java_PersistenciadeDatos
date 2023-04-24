@@ -22,6 +22,7 @@ public class EjemploJDBC {
                     System.out.print(" | Autor_Mensaje: " + resultSet.getString("autor_mensaje"));
                     System.out.print(" | Fecha del mensaje: " + resultSet.getString("fecha_mensaje"));
                 }
+                
                 connection.close();
                 resultSet.close();
                 statement.close();
