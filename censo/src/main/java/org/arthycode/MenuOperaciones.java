@@ -34,10 +34,22 @@ public class MenuOperaciones {
                     calleableCRUD.verRegistros();
                     break;
                 case 3:
-
+                    System.out.println(":: Borrar un registro ::");
+                    System.out.println("Escribe el DNI del registro que quieres eliminar.");
+                    String d = sc.nextLine();
+                    d = sc.nextLine();
+                    calleableCRUD.eliminarRegistro(d);
                     break;
                 case 4:
-
+                    System.out.println(":: Actualizar un registro :: ");
+                    System.out.println("Escribe el nombre...");
+                    String nombreNuevo = sc.nextLine();
+                    nombreNuevo = sc.nextLine();
+                    System.out.println("Escribe la dirección...");
+                    String direccionNueva = sc.nextLine();
+                    System.out.println("Escriba el telefono...");
+                    int telefonoNuevo = sc.nextInt();
+                    calleableCRUD.editarRegistro(new Persona(nombreNuevo, direccionNueva, telefonoNuevo));
                     break;
                 default:
             }

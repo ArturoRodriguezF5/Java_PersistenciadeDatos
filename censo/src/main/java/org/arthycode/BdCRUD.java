@@ -60,7 +60,22 @@ public class BdCRUD implements CalleableCRUD{
 
     @Override
     public void eliminarRegistro(String dni) {
+        Conexion conexion = new Conexion();
 
+        try(Connection conn = conexion.getConnection()) {
+            PreparedStatement ps = null;
+           try {
+               String query = "DELETE FROM censo_app WHERE DNI = ?";
+               ps = conn.prepareStatement(query);
+               ps.setString(1, dni);
+               ps.executeUpdate();
+               System.out.println("Registro eliminado con éxito.");
+           } catch (SQLException ex) {
+               System.out.println(ex.getMessage());
+           }
+        } catch (SQLException e) {
+            System.out.println("No se pudo eliminar el registro." + e.getMessage());
+        }
     }
 
     @Override

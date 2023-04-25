@@ -25,6 +25,11 @@ public class Persona {
         this.direccion = direccion;
         this.telefono = telefono;
     }
+    public Persona(String nombre, String direccion, int telefono) {
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.telefono = telefono;
+    }
 
     public String getDni() {
         return dni;
