@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93626adc-7725-47f2-b64e-91a693ad2be9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/arthycode/Conexion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/arthycode/Inicio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/arthycode/Mensajes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/arthycode/MensajesDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/arthycode/MensajesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/arthycode/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jdbc/src/main/java/com/arthycode/jdbc/EjemploJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jdbc/src/main/java/com/arthycode/jdbc/EjemploJDBC.java" afterDir="false" />
+    <list default="true" id="93626adc-7725-47f2-b64e-91a693ad2be9" name="Changes" comment="Primer commit para subir ejercicio usando conexión a base de datos en java.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/arthycode/MensajesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/arthycode/MensajesDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/arthycode/MensajesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/arthycode/MensajesService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +24,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
   <component name="ProjectId" id="2OsWaGYrSuxQIi8sBVRchTHIWOo" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -45,7 +38,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "mysql-explain.agentPath": "C:\\Users\\ArthyxDimate\\AppData\\Roaming\\JetBrains\\IdeaIC2023.1\\plugins\\mysql-explain-intellij-plugin\\lib\\mysql-explain-agent-1.0-jar-with-dependencies.jar",
+    "mysql-explain.existMysqlJar": "true"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -57,6 +52,25 @@
       <option name="presentableId" value="Default" />
       <updated>1682349832030</updated>
     </task>
+    <task id="LOCAL-00001" summary="Primer commit para subir ejercicio usando conexión a base de datos en java.">
+      <created>1682378501256</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682378501256</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Primer commit para subir ejercicio usando conexión a base de datos en java.">
+      <created>1682378520679</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682378520679</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Primer commit para subir ejercicio usando conexión a base de datos en java." />
+    <option name="LAST_COMMIT_MESSAGE" value="Primer commit para subir ejercicio usando conexión a base de datos en java." />
   </component>
 </project>
