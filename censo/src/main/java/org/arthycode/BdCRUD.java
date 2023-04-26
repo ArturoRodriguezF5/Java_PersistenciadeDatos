@@ -80,7 +80,26 @@ public class BdCRUD implements CalleableCRUD{
 
     @Override
     public void editarRegistro(Persona persona) {
+        Conexion conexion = new Conexion();
 
+        try(Connection conn =  conexion.getConnection()) {
+            PreparedStatement ps = null;
+
+            try {
+                String query = "UPDATE censo_app SET NOMBRE = ?, DIR = ?, TFNO = ? WHERE DNI = ?";
+                ps = conn.prepareStatement(query);
+                ps.setString(1, persona.getDni());
+                ps.setString(2, persona.getNombre());
+                ps.setString(3, persona.getDireccion());
+                ps.setInt(4, persona.getTelefono());
+                ps.executeUpdate();
+                System.out.println("El registro se actualizó correctamamente");
+            } catch (SQLException ex) {
+                System.out.println(ex.getMessage());
+            }
+        } catch (SQLException e) {
+            System.out.println("No fué posible editar el registro." + e.getMessage());
+        }
     }
 }
 

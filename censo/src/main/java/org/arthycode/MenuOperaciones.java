@@ -42,14 +42,17 @@ public class MenuOperaciones {
                     break;
                 case 4:
                     System.out.println(":: Actualizar un registro :: ");
+                    sc.nextLine();
+                    System.out.println("Escribe el DNI del registro");
+                    String dn = sc.nextLine();
                     System.out.println("Escribe el nombre...");
                     String nombreNuevo = sc.nextLine();
-                    nombreNuevo = sc.nextLine();
                     System.out.println("Escribe la dirección...");
                     String direccionNueva = sc.nextLine();
                     System.out.println("Escriba el telefono...");
                     int telefonoNuevo = sc.nextInt();
-                    calleableCRUD.editarRegistro(new Persona(nombreNuevo, direccionNueva, telefonoNuevo));
+                    Persona actualizacion = new Persona(dn, nombreNuevo, direccionNueva, telefonoNuevo);
+                    calleableCRUD.editarRegistro(actualizacion);
                     break;
                 default:
             }
