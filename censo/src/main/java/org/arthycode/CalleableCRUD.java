@@ -6,7 +6,7 @@ public interface CalleableCRUD {
 
     void insertarRegistro(Persona persona);
     void verRegistros();
-    void eliminarRegistro(String dni);
+    void eliminarRegistro(int dni);
     void editarRegistro(Persona persona);
 
 }

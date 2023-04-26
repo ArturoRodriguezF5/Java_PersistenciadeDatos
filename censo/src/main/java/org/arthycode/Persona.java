@@ -3,7 +3,7 @@ package org.arthycode;
 public class Persona {
 
     // Atributos de las personas
-    private String dni;
+    private int dni;
     private String nombre;
     private String fecha_nacimiento;
     private String direccion;
@@ -12,14 +12,14 @@ public class Persona {
     // Constructores
     public Persona() {
     }
-    public Persona(String dni, String nombre, String fecha_nacimiento, String direccion, int telefono) {
+    public Persona(int dni, String nombre, String fecha_nacimiento, String direccion, int telefono) {
         this.dni = dni;
         this.nombre = nombre;
         this.fecha_nacimiento = fecha_nacimiento;
         this.direccion = direccion;
         this.telefono = telefono;
     }
-    public Persona(String dni, String nombre, String direccion, int telefono) {
+    public Persona(int dni, String nombre, String direccion, int telefono) {
         this.dni = dni;
         this.nombre = nombre;
         this.direccion = direccion;
@@ -31,11 +31,11 @@ public class Persona {
         this.telefono = telefono;
     }
 
-    public String getDni() {
+    public int getDni() {
         return dni;
     }
 
-    public void setDni(String dni) {
+    public void setDni(int dni) {
         this.dni = dni;
     }
 

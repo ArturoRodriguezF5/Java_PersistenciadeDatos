@@ -19,8 +19,8 @@ public class MenuOperaciones {
                 case 1:
                     System.out.println(":: Registrar persona...");
                     System.out.println("Escribe el DNI...");
-                    String dni = sc.nextLine();
-                    dni = sc.nextLine();
+                    int dni = sc.nextInt();
+                    sc.nextLine();
                     System.out.println("Escribe el nombre...");
                     String nombre = sc.nextLine();
                     System.out.println("Escribe la dirección...");
@@ -36,23 +36,26 @@ public class MenuOperaciones {
                 case 3:
                     System.out.println(":: Borrar un registro ::");
                     System.out.println("Escribe el DNI del registro que quieres eliminar.");
-                    String d = sc.nextLine();
-                    d = sc.nextLine();
+                    int d = sc.nextInt();
                     calleableCRUD.eliminarRegistro(d);
                     break;
                 case 4:
                     System.out.println(":: Actualizar un registro :: ");
-                    sc.nextLine();
                     System.out.println("Escribe el DNI del registro");
-                    String dn = sc.nextLine();
+                    int dn = sc.nextInt();
+                    sc.nextLine();
                     System.out.println("Escribe el nombre...");
                     String nombreNuevo = sc.nextLine();
                     System.out.println("Escribe la dirección...");
                     String direccionNueva = sc.nextLine();
                     System.out.println("Escriba el telefono...");
                     int telefonoNuevo = sc.nextInt();
-                    Persona actualizacion = new Persona(dn, nombreNuevo, direccionNueva, telefonoNuevo);
-                    calleableCRUD.editarRegistro(actualizacion);
+                    Persona actualizarPersona = new Persona();
+                    actualizarPersona.setDni(dn);
+                    actualizarPersona.setNombre(nombreNuevo);
+                    actualizarPersona.setDireccion(direccionNueva);
+                    actualizarPersona.setTelefono(telefonoNuevo);
+                    calleableCRUD.editarRegistro(actualizarPersona);
                     break;
                 default:
             }

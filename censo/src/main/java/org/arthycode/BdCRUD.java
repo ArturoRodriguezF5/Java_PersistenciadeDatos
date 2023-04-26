@@ -15,9 +15,9 @@ public class BdCRUD implements CalleableCRUD{
         try(Connection conn = conexion.getConnection()) {
             PreparedStatement ps = null;
             try {
-                String query = "INSERT INTO censo_app (DNI, NOMBRE, FECREG, DIR, TFNO) VALUES (?, ?, current_timestamp(), ?, ?)";
+                String query = "INSERT INTO censo_nueva (id_censo, NOMBRE, FECREG, DIR, TFNO) VALUES (?, ?, current_timestamp(), ?, ?)";
                 ps = conn.prepareStatement(query);
-                ps.setString(1, persona.getDni());
+                ps.setInt(1, persona.getDni());
                 ps.setString(2, persona.getNombre());
                 ps.setString(3, persona.getDireccion());
                 ps.setInt(4, persona.getTelefono());
@@ -39,12 +39,12 @@ public class BdCRUD implements CalleableCRUD{
         ResultSet rs = null;
 
         try (Connection conn = conexion.getConnection()) {
-                String query = "SELECT * FROM censo_app";
+                String query = "SELECT * FROM censo_nueva";
                 ps = conn.prepareStatement(query);
                 rs = ps.executeQuery();
                 while (rs.next()) {
                     System.out.println();
-                    System.out.print("| DNI: " + rs.getString("DNI"));
+                    System.out.print("| DNI: " + rs.getInt("id_censo"));
                     System.out.print("  | Nombre: " + rs.getString("NOMBRE"));
                     System.out.print("  | Fecha: " + rs.getString("FECREG"));
                     System.out.print("  | Dirección: " + rs.getString("DIR"));
@@ -59,15 +59,15 @@ public class BdCRUD implements CalleableCRUD{
     }
 
     @Override
-    public void eliminarRegistro(String dni) {
+    public void eliminarRegistro(int dni) {
         Conexion conexion = new Conexion();
 
         try(Connection conn = conexion.getConnection()) {
             PreparedStatement ps = null;
            try {
-               String query = "DELETE FROM censo_app WHERE DNI = ?";
+               String query = "DELETE FROM censo_nueva WHERE id_censo = ?";
                ps = conn.prepareStatement(query);
-               ps.setString(1, dni);
+               ps.setInt(1, dni);
                ps.executeUpdate();
                System.out.println("Registro eliminado con éxito.");
            } catch (SQLException ex) {
@@ -86,12 +86,13 @@ public class BdCRUD implements CalleableCRUD{
             PreparedStatement ps = null;
 
             try {
-                String query = "UPDATE censo_app SET NOMBRE = ?, DIR = ?, TFNO = ? WHERE DNI = ?";
+                String query = "UPDATE censo_nueva SET NOMBRE = ?, DIR = ?, TFNO = ? WHERE id_censo = ?";
                 ps = conn.prepareStatement(query);
-                ps.setString(1, persona.getDni());
-                ps.setString(2, persona.getNombre());
-                ps.setString(3, persona.getDireccion());
-                ps.setInt(4, persona.getTelefono());
+
+                ps.setString(1, persona.getNombre());
+                ps.setString(2, persona.getDireccion());
+                ps.setInt(3, persona.getTelefono());
+                ps.setInt(4, persona.getDni());
                 ps.executeUpdate();
                 System.out.println("El registro se actualizó correctamamente");
             } catch (SQLException ex) {
